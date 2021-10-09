@@ -51,3 +51,24 @@ https://www.data.go.kr/
 - 네이버 영화 스크래핑
 - 현재 상영작 영화 리뷰 스크래핑
 - 네이버 뉴스 기사 
+
+## Day 7 (2021-10-0)
+
+- 네이버 블로그 스크래핑(완성하지 못함)
+```
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-30-74baf2d99352> in <module>
+      1 query = input('검색 질의: ')
+----> 2 post_df = get_posts(query)
+      3 print('Done')
+
+<ipython-input-29-b62a5e7bc102> in get_posts(query)
+     16 
+     17     for post in posts:
+---> 18         title = post.find('a', {'class':'api_txt_lines total_tit'}).get_text()
+     19         date = post.find('span', {'class':'sub_time sub_txt'}).get_text()
+     20         blogger = post.find('a', {'class':'sub_txt sub_name'}).get_text()
+
+AttributeError: 'NoneType' object has no attribute 'get_text'
+```
