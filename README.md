@@ -77,9 +77,17 @@ AttributeError: 'NoneType' object has no attribute 'get_text'
 
 - 네이버 웹툰 스크래핑 실시
   - `find_element()` 단수 / `find_elements()` 복수
-  - `find_element_by_class_name("")` - 해당 클래스의 값을 가져옴
-  -  `find_element_by_tag_name("")` - 해당 tag 값을 가져옴
-  -  `find_element_by_class_name("").text` 해당 tag값의 text를 가져옴
+  - `<div id="header">` 여기서 div는 tag를 의미 뒤에 id, class 따로 입력
+    - `find_element_by_class_name("")` - 해당 클래스의 값을 가져옴
+    -  `find_element_by_tag_name("")` - 해당 tag 값을 가져옴
+    -  `find_element_by_class_name("").text` 해당 tag값의 text를 가져옴
   -  `click()` 해당 부분에 클릭을 실시함
   -  `import time` <br> `time.sleep(1)` - 1초정도 잠깐 쉬었다가 실시  
      (컴퓨터에서 바로 실시하면 인식을 하지못해 중간에 딜레이 시간을 벌기위함) 
+     
+## Day 8 (2021-10-15)
+
+- CGV 영화리뷰 스크래핑 실시
+  - !cp {0} {1}: {0}을 {1}에 복사
+  - from selenium.common.exceptions import NoSuchElementException - 예외처리 프로세스
+- CGV 상영작 스크래핑 실시 
