@@ -91,3 +91,22 @@ AttributeError: 'NoneType' object has no attribute 'get_text'
   - !cp {0} {1}: {0}을 {1}에 복사
   - from selenium.common.exceptions import NoSuchElementException - 예외처리 프로세스
 - CGV 상영작 스크래핑 실시 
+
+## Day 9 (2021-10-16)
+
+- 구글 이미지 스크래핑 실시
+- 오류로 인해 진행불가
+```
+During handling of the above exception, another exception occurred:
+
+JavascriptException                       Traceback (most recent call last)
+/usr/local/lib/python3.7/dist-packages/selenium/webdriver/remote/errorhandler.py in check_response(self, response)
+    241                 alert_text = value['alert'].get('text')
+    242             raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+--> 243         raise exception_class(message, screen, stacktrace)
+    244 
+    245     def _value_or_default(self, obj: Mapping[_KT, _VT], key: _KT, default: _VT) -> _VT:
+
+JavascriptException: Message: javascript error: missing ) after argument list
+  (Session info: headless chrome=94.0.4606.71)
+```
